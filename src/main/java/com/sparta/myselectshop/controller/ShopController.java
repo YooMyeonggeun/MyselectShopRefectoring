@@ -10,7 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class ShopController {
 
     @GetMapping("/shop")
-    public ModelAndView shop(){
-        return new ModelAndView("index");
+    public ModelAndView shop() {
+        ModelAndView modelAndView = new ModelAndView("index");
+        modelAndView.addObject("username","");
+        return modelAndView;
     }
 }
